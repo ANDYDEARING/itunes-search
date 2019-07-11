@@ -1,8 +1,12 @@
 const URLStart = "https://itunes-api-proxy.glitch.me/search?"
 
+let searchMod = ''
+
 document.querySelector("#search-button").addEventListener('click', function () {
     let searchContent = document.querySelector("#search-field").value
-    let searchURL = URLStart + "term=" + encodeURIComponent(searchContent)
+    let searchModButtons = document.querySelectorAll(".search-type")
+    let searchMod = getCheckedRadioValue(searchModButtons)
+    let searchURL = URLStart + "term=" + encodeURIComponent(searchContent) + "&entity=song" + searchMod
     fetch(searchURL)
     .then(function (response) {
         return response.json()
@@ -12,6 +16,14 @@ document.querySelector("#search-button").addEventListener('click', function () {
         console.log(data.results[0])
     })
 })
+
+function getCheckedRadioValue (radioSet) {
+    for (button of radioSet){
+        if (button.checked){
+            return button.value
+        }
+    }
+}
 
 document.querySelector("#search-field").addEventListener("keydown", function(event){
     if (event.key === 'Enter') {

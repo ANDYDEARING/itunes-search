@@ -13,6 +13,22 @@
     <div class="search-form">
         <input id="search-field" type="text"></input>
         <button id="search-button">Search</button>
+        <br>
+        <input type="radio" id="search-all" class="search-type" 
+            name="search-type" value="" checked="true">
+        <label for="search-all">All</label>
+    
+        <input type="radio" id="search-artist" class="search-type" 
+            name="search-type" value="&attribute=artistTerm">
+        <label for="search-artist">Artist</label>
+    
+        <input type="radio" id="search-song" class="search-type" 
+            name="search-type" value="&attribute=songTerm">
+        <label for="search-song">Song</label>
+    
+        <input type="radio" id="search-album" class="search-type" 
+            name="search-type" value="&attribute=albumTerm">
+        <label for="search-album">Album</label>
         <figure>
             <figcaption id='music-caption'></figcaption>
             <audio id="music-player"
