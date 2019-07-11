@@ -36,10 +36,12 @@ function makeSearchResults(resultsArray){
         const resultButton = document.createElement('button')
         resultButton.innerText = '▶︎'
         resultButton.value = result.previewUrl
+        resultButton.name = `${result.artistName} - ${result.trackName}`
         resultDiv.appendChild(resultButton)
         resultButton.addEventListener('click', function() {
             document.querySelector('#music-player').src = resultButton.value
-            // document.querySelector('#music-player').
+            document.querySelector('#music-caption').innerText = resultButton.name
+            document.querySelector('#music-player').autoplay = 'true'
         })
         resultDiv.classList.add('result-item')
         
