@@ -5,3 +5,10 @@
 .search-form {
     text-align: center;
 }
+
+.result-item {
+    border: solid;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}

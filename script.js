@@ -23,12 +23,17 @@ function makeSearchResults(resultsArray){
     document.querySelector('#results').innerHTML = ""
     for (result of resultsArray){
         const resultDiv = document.createElement('div')
+        const resultPicImg = document.createElement('img')
+        resultPicImg.src = result.artworkUrl100
+        resultPicImg.alt = 'cover art'
+        resultDiv.appendChild(resultPicImg)
         const resultTitle = document.createElement('p')
         resultTitle.innerText = result.trackName
+        resultDiv.appendChild(resultTitle)
         const resultArtist = document.createElement('p')
         resultArtist.innerText = result.artistName
-        resultDiv.appendChild(resultTitle)
         resultDiv.appendChild(resultArtist)
+        resultDiv.classList.add('result-item')
         document.querySelector('#results').appendChild(resultDiv)
 
         // const listItem = document.createElement('li')
