@@ -33,12 +33,16 @@ function makeSearchResults(resultsArray){
         const resultArtist = document.createElement('p')
         resultArtist.innerText = result.artistName
         resultDiv.appendChild(resultArtist)
+        const resultButton = document.createElement('button')
+        resultButton.innerText = '▶︎'
+        resultButton.value = result.previewUrl
+        resultDiv.appendChild(resultButton)
+        resultButton.addEventListener('click', function() {
+            document.querySelector('#music-player').src = resultButton.value
+            // document.querySelector('#music-player').
+        })
         resultDiv.classList.add('result-item')
+        
         document.querySelector('#results').appendChild(resultDiv)
-
-        // const listItem = document.createElement('li')
-        // listItem.innerText = newLikeForm.querySelector('input').value
-        // newLikeForm.querySelector('input').value = ''
-        // document.querySelector('#likes').appendChild(listItem)
     }
 }
