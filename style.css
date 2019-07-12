@@ -24,6 +24,10 @@ body {
     outline: none;
 }
 
+#music-caption{
+    margin-bottom: 2px;
+}
+
 .search-form {
     text-align: center;
 }
