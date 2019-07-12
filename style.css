@@ -11,8 +11,16 @@ body {
     text-align: center;
 }
 
+#music-player{
+    outline: none;
+}
+
 #search-field{
     border: 1px solid lightgrey;
+    outline: none;
+}
+
+#search-button{
     outline: none;
 }
 
@@ -55,4 +63,5 @@ body {
     margin-top: auto;
     padding-top:  9px;
     padding-left: 18px;
+    outline: none;
 }
