@@ -37,7 +37,7 @@ function makeSearchResults(resultsArray){
     for (result of resultsArray){
 
         const resultDiv = document.createElement('div')
-        
+
         const resultPicImg = document.createElement('img')
         resultPicImg.src = result.artworkUrl100
         resultPicImg.alt = 'cover art'
@@ -48,10 +48,11 @@ function makeSearchResults(resultsArray){
         resultDiv.appendChild(resultTitle)
 
         const resultArtist = document.createElement('p')
-        resultArtist.innerText = result.artistName
+        resultArtist.innerHTML = `<em>${result.artistName}</em>`
         resultDiv.appendChild(resultArtist)
 
         const resultButton = document.createElement('button')
+        resultButton.classList.add('f6', 'grow', 'no-underline', 'br-pill', 'ph3', 'pv2', 'mb2', 'dib', 'white', 'bg-blue')
         resultButton.innerText = '▶︎'
         resultButton.value = result.previewUrl
         resultButton.name = `${result.artistName} - ${result.trackName}`

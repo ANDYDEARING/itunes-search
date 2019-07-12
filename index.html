@@ -11,32 +11,34 @@
 <body>
     <h1 class="heading">iTunes Search</h1>
     <div class="search-form">
-        <input id="search-field" type="text"></input>
-        <button id="search-button">Search</button>
+        <input id="search-field" class="f6 br-pill ph3 pv2 mb2 dib" type="text"></input>
+        <button id="search-button" class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-blue">Search</button>
         <br>
-        <input type="radio" id="search-all" class="search-type" 
-            name="search-type" value="" checked="true">
-        <label for="search-all">All</label>
-    
-        <input type="radio" id="search-artist" class="search-type" 
-            name="search-type" value="&attribute=artistTerm">
-        <label for="search-artist">Artist</label>
-    
-        <input type="radio" id="search-song" class="search-type" 
-            name="search-type" value="&attribute=songTerm">
-        <label for="search-song">Song</label>
-    
-        <input type="radio" id="search-album" class="search-type" 
-            name="search-type" value="&attribute=albumTerm">
-        <label for="search-album">Album</label>
+            <div class="search-btn-container">
+                <input type="radio" id="search-all" class="search-type" 
+                    name="search-type" value="" checked="true">
+                <label for="search-all">All</label>
+            
+                <input type="radio" id="search-artist" class="search-type" 
+                    name="search-type" value="&attribute=artistTerm">
+                <label for="search-artist">Artist</label>
+            
+                <input type="radio" id="search-song" class="search-type" 
+                    name="search-type" value="&attribute=songTerm">
+                <label for="search-song">Song</label>
+            
+                <input type="radio" id="search-album" class="search-type" 
+                    name="search-type" value="&attribute=albumTerm">
+                <label for="search-album">Album</label>
+            </div>
             <p id='music-caption'></p>
-            <audio id="music-player" controls src="">
-                    Your browser does not support the
-                    <code>audio</code> element.
-            </audio>
-    </div>
-    <hr>
-    <div id="results" class="flex flex-wrap">
-        
+        <audio id="music-player" controls src="">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+        <hr>
+        <div id="results" class="flex flex-wrap justify-center">
+            <!-- search results go here -->
+        </div>
     </div>
 </body>
