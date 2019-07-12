@@ -7,11 +7,9 @@ document.querySelector("#search-button").addEventListener('click', function () {
     let searchURL = URLStart + encodeURIComponent(searchContent) + "&entity=song" + searchMod
     fetch(searchURL)
     .then(function (response) {
-        console.log(response)
         return response.json()
     })
     .then(function (data) {
-        console.log(data)
         makeSearchResults(data.results)
     })
 })
